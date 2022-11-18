@@ -1,0 +1,52 @@
+create database set1;
+use set1;
+
+create table CITY(
+    id int,
+    name varchar(17),
+    countrycode varchar(3),
+    district varchar(20),
+    population int
+);
+
+
+Insert into CITY values(6,'Rotterdam' ,'NLD' ,'Zuid-Holland', 593321)
+,(3878, 'Scottsdale' ,'USA', 'Arizona', 202705)
+,(3965, 'Corona', 'USA', 'California', 124966)
+,(3973, 'Concord', 'USA', 'California', 121780)
+,(3977, 'Cedar Rapids' ,'USA' ,'Iowa' ,'120758')
+,(3982, 'Coral Springs', 'USA', 'Florida', 117549)
+,(4054, 'Fairfield', 'USA', 'California', 92256)
+,(4058, 'Boulder', 'USA' ,'Colorado', 91238)
+,(4061, 'Fall River', 'USA','Massachusetts', 90555);
+
+
+select * from CITY;
+
+Q1. Query all columns for all American cities in the CITY table with populations larger than 100000.
+The CountryCode for America is USA.
+The CITY table is described as follows:
+
+--Q1. Query all columns for all American cities in the CITY table with populations larger than 100000.The CountryCode for America is USA.
+select * from CITY where COUNTRYCODE ='USA' and population>100000; 
+
+
+
+
+--Q2. Query the NAME field for all American cities in the CITY table with populations larger than 120000.
+select name from CITY where COUNTRYCODE ='USA' and population>120000; 
+
+--Q3. Query all columns (attributes) for every row in the CITY table.
+select * from CITY;
+
+--Q4. Query all columns for a city in CITY with the ID 1661.
+select * from CITY where id =1661;
+
+--Q5. Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
+select * from CITY where COUNTRYCODE ='JPN';
+
+--Q6. Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN.
+select name from CITY where COUNTRYCODE ='JPN';
+
+
+
